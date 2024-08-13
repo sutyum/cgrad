@@ -1,0 +1,24 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BUILD_DIR	Makefile	/^BUILD_DIR := build$/;"	m
+BUILD_TYPE	Makefile	/^BUILD_TYPE ?= debug$/;"	m
+CC	Makefile	/^CC := gcc$/;"	m
+CFLAGS	Makefile	/^	CFLAGS := -O3 -Wall -Werror$/;"	m
+CFLAGS	Makefile	/^	CFLAGS := -g -O0 -Wall -Werror$/;"	m
+EXECUTABLE	Makefile	/^EXECUTABLE := $(BUILD_DIR)\/$(TARGET)-$(BUILD_TYPE)$/;"	m
+OBJ_FILES	Makefile	/^OBJ_FILES := $(patsubst $(SRC_DIR)\/%.c,$(BUILD_DIR)\/%.o,$(SRC_FILES))$/;"	m
+SRC_DIR	Makefile	/^SRC_DIR := .\/$/;"	m
+SRC_FILES	Makefile	/^SRC_FILES := $(wildcard $(SRC_DIR)\/*.c)$/;"	m
+TARGET	Makefile	/^TARGET ?= cgrad$/;"	m
+_prev_data	cgrad.c	/^  float _prev_data;$/;"	m	struct:__anon1	file:
+data	cgrad.c	/^  float data;$/;"	m	struct:__anon1	file:
+main	cgrad.c	/^int main() {$/;"	f
+value_add	cgrad.c	/^value_t value_add(value_t a, value_t b) {$/;"	f
+value_create	cgrad.c	/^value_t value_create(float data) {$/;"	f
+value_mul	cgrad.c	/^value_t value_mul(value_t a, value_t b) {$/;"	f
+value_print	cgrad.c	/^void value_print(value_t v) {$/;"	f
+value_t	cgrad.c	/^} value_t;$/;"	t	typeref:struct:__anon1	file:

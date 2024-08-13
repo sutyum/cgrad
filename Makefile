@@ -28,6 +28,9 @@ EXECUTABLE := $(BUILD_DIR)/$(TARGET)-$(BUILD_TYPE)
 
 all: $(EXECUTABLE)
 
+run: $(EXECUTABLE)
+	./$(EXECUTABLE)
+
 debug:
 	$(MAKE) BUILD_TYPE=debug
 
@@ -45,7 +48,3 @@ $(BUILD_DIR):
 
 clean:
 	rm -rf $(BUILD_DIR)
-
-# Debug target
-print-%:
-	@echo $* = $($*)

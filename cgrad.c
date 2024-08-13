@@ -1,8 +1,10 @@
 #include <stdio.h>
 
-typedef struct {
+typedef struct value_t {
   float data;
-  float _prev_data;
+  struct value_t* left;
+  struct value_t* right;
+  char op;
 } value_t;
 
 void value_print(value_t v) {
@@ -17,13 +19,19 @@ value_t value_create(float data) {
 
 value_t value_add(value_t a, value_t b) {
   return (value_t){ 
-    .data = a.data + b.data
+    .data = a.data + b.data,
+    .left = &a,
+    .right = &b,
+    .op = '+'
   };
 }
 
 value_t value_mul(value_t a, value_t b) {
   return (value_t){ 
-    .data = a.data * b.data
+    .data = a.data * b.data,
+    .left = &a,
+    .right = &b,
+    .op = '*'
   };
 }
 
@@ -34,7 +42,7 @@ int main() {
   value_t c = value_add(a, b);
   value_print(c);
 
-  value_t d = value_mul(a, b);
+  value_t d = value_mul(c, b);
   value_print(d);
 
   return 0;
